@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('text_models', function (Blueprint $table) {
             $table->id();
             $table->string('title', 50);
+            $table->string('slug', 50);
             $table->text('text');
             $table->boolean('active')->default(1);
             $table->integer('user_id')->unsigned();
